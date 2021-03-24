@@ -17,7 +17,7 @@ class VideoPage extends React.Component{
             <div>
                 <div>
                 <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+                    url="https://www.youtube.com/watch?v=5v1wqxnrmrk&ab_channel=PamelaReif"
                 />
                 </div>
                 <Link to="/homepage">GO TO HOMEPAGE</Link>
