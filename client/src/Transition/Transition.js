@@ -1,70 +1,63 @@
-import './VideoPage.css'
+import './Transition.css'
 import React from "react";
 import {Link} from 'react-router-dom';
-import ReactPlayer from "react-player"
-import Database from '../Database'
 
-class VideoPage extends React.Component{
+class Transition extends React.Component{
+
     constructor(props){
-        super(props)
+        super(props);
         if (this.props.location.state.progress === 0){
             this.state = {
                 progress: this.props.location.state.progress,
-                message: "Dynamic Stretching",
-                url: Database[0][0].link
+                message: "Let's do some Dynamic Stretching"
             }
         }
         else if (this.props.location.state.progress === 1){
             this.state = {
                 progress: this.props.location.state.progress,
-                message: "Light Exercises",
-                url: Database[0][1].link
+                message: "Let's do some Light Exercises"
             }
         }
         else if (this.props.location.state.progress === 2){
             this.state = {
                 progress: this.props.location.state.progress,
-                message: "Let's see what the plan is for today:",
-                url: this.props.location.state.link
+                message: "Let's see what the plan is for today:"
             }
         }
         else {
             this.state = {
                 progress: this.props.location.state.progress,
-                message: "Static Stretching",
-                url: Database[0][2].link
+                message: "Lets finish up with some Static Stretching"
             }
         }
-     
+
     }
+
 
     render(){
         return(
-            <div>
+            <div className="Transition"> 
                 <div>
-                    <ReactPlayer
-                        url={this.state.url}
-                        controls
-                    />
+                    {this.state.message}
                 </div>
                 <div>
                     <Link className="link" to={{
                         pathname: './homepage',
                         state: {
-                            progress: this.state.progress + 1,
+                            progress: this.state.progress,
                         }
                     }}>
-                        Return Home
+                        Maybe Later (Return to Home)
                     </Link>
                 </div>
                 <div>
                     <Link className="link" to={{
-                        pathname: this.state.progress === 3? './homepage' : './transition',
+                        pathname: this.state.progress === 2? "./trainer" : './video',
                         state: {
-                            progress: this.state.progress + 1,
+                            progress: this.state.progress,
                         }
                     }}>
-                        Next
+                        SURE
                     </Link>
                 </div>
             </div>
@@ -72,4 +65,4 @@ class VideoPage extends React.Component{
     }
 }
 
-export default VideoPage
+export default Transition
