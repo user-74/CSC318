@@ -1,0 +1,40 @@
+.progress-title-container{
+    background-color: lightblue;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 6em;
+    text-align: center;
+}
+
+.progress-home-container{
+    background-color: lightblue;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 6em;
+    text-align: center;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+}
+
+.progress-title {
+    font-family: Garamond, serif;
+    font-size: 3em;
+}
+
+.progress-home{
+    font-family: Garamond, serif;
+    font-size: 2em;
+}
+
+.progress-page{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    margin-top: 10em;
+}

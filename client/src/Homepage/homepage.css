@@ -17,3 +17,26 @@
     text-align: center;
     border-radius: 10px;
 }
+
+.leaderboard-box{
+    background-color: lightblue;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.leaderboard-box:hover{
+    background-color: lightgreen;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.progress {
+    background-color: lightblue;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 285px;
+}
+
+.progress:hover{
+    background-color: lightgreen;
+}

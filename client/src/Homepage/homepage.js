@@ -3,7 +3,6 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import Profile from '../Profile/Profile'
 import StartButton from '../StartButton/StartButton'
-import Progress from '../Progress/Progress'
 
 class Homepage extends React.Component{
     constructor(props){
@@ -43,14 +42,31 @@ class Homepage extends React.Component{
                     </Link>
                 </div>
                 <div>
-                    <Link to="/leaderboard">
+                    <Link className="link" to={{
+                        pathname: '/leaderboard',
+                        state: {
+                            progress: this.state.progress,
+                        }
+                    }}>
                         <div className="leaderboard-box">
-                            LEADERBOARD
+                            <h5>Friend Activity and LEADERBOARD</h5> 
+                            <h6>Jenna just finished Yoga!</h6> 
+                            <h6>Jean finished Stretches 15 minuts ago!</h6>
                         </div>
                     </Link>
                 </div>
                 <div>
-                    <Progress />
+                    <Link className="link" to={{
+                        pathname: '/progress',
+                        state: {
+                            progress: this.state.progress,
+                        }
+                    }}>
+                        <div className="progress">
+                            <h3>Progress Bar</h3>
+                            <progress className="myProgress" value={this.state.progress} max="4" />
+                        </div>
+                    </Link>
                 </div>
             </div>
         )

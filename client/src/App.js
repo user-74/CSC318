@@ -5,6 +5,7 @@ import LeaderBoard from "./LeaderBoard/LeaderBoard";
 import Transition from "./Transition/Transition";
 import Trainer from "./Trainer/Trainer";
 import MakePlan from "./MakePlan/MakePlan";
+import Progress from './Progress/Progress'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path={"/transition"} exact component={Transition} />
             <Route path={"/trainer"} exact component={Trainer} />
             <Route path={"/makeplan"} exact component={MakePlan} />
+            <Route path={"/progress"} exact component={Progress} />
           </Switch>
         </div>
       </div>
