@@ -37,29 +37,29 @@ class Transition extends React.Component{
     render(){
         return(
             <div className="Transition"> 
-                <div>
-                    {this.state.message}
+                <div className="transition-message">
+                    <span className="transition-title">{this.state.message}</span>
                 </div>
-                <div>
-                    <Link className="link" to={{
-                        pathname: './homepage',
-                        state: {
-                            progress: this.state.progress,
-                        }
-                    }}>
-                        Maybe Later (Return to Home)
-                    </Link>
-                </div>
-                <div>
-                    <Link className="link" to={{
-                        pathname: this.state.progress === 2? "./trainer" : './video',
-                        state: {
-                            progress: this.state.progress,
-                        }
-                    }}>
-                        SURE
-                    </Link>
-                </div>
+                <Link className="link" to={{
+                    pathname: './homepage',
+                    state: {
+                        progress: this.state.progress,
+                    }
+                }}>
+                    <div className="transition-home">
+                        <span className="transition-text">Maybe Later (Return to Home)</span>
+                    </div>
+                </Link>
+                <Link className="link" to={{
+                    pathname: this.state.progress === 2? "./trainer" : './video',
+                    state: {
+                        progress: this.state.progress,
+                    }
+                }}>
+                    <div className="transition-next">
+                        <span className="transition-text">SURE</span>
+                    </div>
+                </Link>
             </div>
         )
     }

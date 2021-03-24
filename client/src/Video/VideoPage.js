@@ -24,8 +24,8 @@ class VideoPage extends React.Component{
         else if (this.props.location.state.progress === 2){
             this.state = {
                 progress: this.props.location.state.progress,
-                message: "Let's see what the plan is for today:",
-                url: this.props.location.state.link
+                message: this.props.location.state.video.name,
+                url: this.props.location.state.video.link
             }
         }
         else {
@@ -40,33 +40,33 @@ class VideoPage extends React.Component{
 
     render(){
         return(
-            <div>
-                <div>
+            <div className="videoPage">
+                <div className="video-title-container">
+                    <span className="video-title">{this.state.message}</span>
+                </div>
+                <div className="video-container">
                     <ReactPlayer
+                        className="video"
                         url={this.state.url}
                         controls
                     />
                 </div>
-                <div>
-                    <Link className="link" to={{
-                        pathname: './homepage',
-                        state: {
-                            progress: this.state.progress + 1,
-                        }
-                    }}>
-                        Return Home
-                    </Link>
-                </div>
-                <div>
-                    <Link className="link" to={{
-                        pathname: this.state.progress === 3? './homepage' : './transition',
-                        state: {
-                            progress: this.state.progress + 1,
-                        }
-                    }}>
-                        Next
-                    </Link>
-                </div>
+                <Link className="link" to={{
+                    pathname: './homepage',
+                    state: {
+                        progress: this.state.progress + 1,
+                    }
+                }}>
+                    <div className="video-home"><span className="video-text">Return Home</span></div>
+                </Link>
+                <Link className="link" to={{
+                    pathname: this.state.progress === 3? './homepage' : './transition',
+                    state: {
+                        progress: this.state.progress + 1,
+                    }
+                }}>
+                    <div className="video-next"><span className="video-text">Next</span></div>
+                </Link>
             </div>
         )
     }
