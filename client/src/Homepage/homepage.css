@@ -1,0 +1,19 @@
+.homepage{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 1em;
+    grid-column-gap:1em;
+    grid-row-gap: 1.5em;
+    grid-auto-rows: minmax(300px, auto);
+    grid-auto-columns: minmax(300px, auto);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homepage > div{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
