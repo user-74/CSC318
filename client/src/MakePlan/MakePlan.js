@@ -19,7 +19,6 @@ class MakePlan extends React.Component {
         <div className="makePlan-plan-title-container">
           <span className="makePlan-title">Choose From Below</span>
         </div>
-
         <div className="makePlan-plan-container">
           {this.state.videos[1].map(function (video, i) {
             return (
@@ -48,29 +47,17 @@ class MakePlan extends React.Component {
         <Link
           className="link"
           to={{
-            pathname: "/trainer",
-            state: {
-              progress: this.state.progress,
-            },
-          }}
-        >
-          <Button variant="contained" className="makePlan-back-container">
-            <span className="makePlan-text">Back</span>
-          </Button>
-        </Link>
-
-        <Link
-          className="link"
-          to={{
             pathname: "/homepage",
             state: {
               progress: this.state.progress,
             },
           }}
         >
-          <Button variant="contained" className="makePlan-home-container">
-            <span className="makePlan-text">Home Page</span>
-          </Button>
+          <div className="makePlan-home-container">
+            <Button variant="contained">
+              <span className="makePlan-text">Home Page</span>
+            </Button>
+          </div>
         </Link>
       </div>
     );

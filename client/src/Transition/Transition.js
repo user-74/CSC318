@@ -2,6 +2,7 @@ import "./Transition.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
+import Timeline from "../Timeline/Timeline";
 
 class Transition extends React.Component {
   constructor(props) {
@@ -35,6 +36,11 @@ class Transition extends React.Component {
         <div className="transition-message">
           <span className="transition-title">{this.state.message}</span>
         </div>
+        <div className="transition-timeline">
+          <h2>Today's Exercise Progress:</h2>
+          <Timeline progress={this.state.progress} />
+        </div>
+
         <Link
           className="link"
           to={{
@@ -51,7 +57,7 @@ class Transition extends React.Component {
         <Link
           className="link"
           to={{
-            pathname: this.state.progress === 2 ? "./trainer" : "./video",
+            pathname: this.state.progress === 2 ? "/makeplan" : "/video",
             state: {
               progress: this.state.progress,
             },

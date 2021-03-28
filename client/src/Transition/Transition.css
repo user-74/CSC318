@@ -18,8 +18,19 @@
   vertical-align: middle;
 }
 
+.transition-timeline {
+  grid-area: timeline;
+  width: 100%;
+  height: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12em;
+  justify-content: center;
+  text-align: center;
+}
+
 .transition-home {
-  /* grid-area: home; */
+  grid-area: home;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -36,9 +47,10 @@
   display: grid;
   grid-template-areas:
     "message message"
+    "timeline timeline"
     "home next";
-  grid-gap: 3em;
-  row-gap: 1em;
+  grid-gap: 30em;
+  row-gap: 3em;
 }
 
 .transition-text {
