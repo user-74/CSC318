@@ -1,6 +1,7 @@
 import './LeaderBoard.css'
 import React from "react";
 import {Link} from 'react-router-dom';
+import { Button } from '@material-ui/core'
 
 class LeaderBoard extends React.Component{
     constructor(props){
@@ -45,7 +46,7 @@ class LeaderBoard extends React.Component{
                         progress: this.state.progress,
                     }
                 }}>
-                    <div className="leaderboard-home-container"><span className="leaderboard-home">GO TO HOMEPAGE</span></div>
+                    <Button variant="contained"> Back to Homepage </Button>
                 </Link>
             </div>
         )

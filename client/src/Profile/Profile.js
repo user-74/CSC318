@@ -1,24 +1,25 @@
-import './Profile.css'
+import "./Profile.css";
+import { Box }from '@material-ui/core';
 import React from "react";
 
-class Profile extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            progress: props.progress
-        }
-    }
+class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      progress: props.progress,
+    };
+  }
 
-    render(){
-        return(
-            <div className="Profile">
-                Picture
-                <h4>LEVEL 15: {this.state.progress * 20}/100</h4>
-                <h4>Monday, March 15</h4>
-                <h2>John Doe</h2>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <Box border={2}>
+        <img src={"uoft.jpg"} style={{height: 100, width: 100}} alt="Profile"/><br></br>
+        LEVEL 15: {this.state.progress * 20}/100<br></br>
+        Monday, March 15<br></br>
+        John Doe
+      </Box>
+    );
+  }
 }
 
-export default Profile
+export default Profile;

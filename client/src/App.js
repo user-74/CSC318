@@ -1,12 +1,12 @@
-import {Route, BrowserRouter, Switch} from "react-router-dom"
-import Homepage from './Homepage/homepage'
-import VideoPage from './Video/VideoPage'
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import Homepage from "./Homepage/homepage";
+import VideoPage from "./Video/VideoPage";
 import LeaderBoard from "./LeaderBoard/LeaderBoard";
 import Transition from "./Transition/Transition";
 import Trainer from "./Trainer/Trainer";
 import MakePlan from "./MakePlan/MakePlan";
-import Progress from './Progress/Progress'
-
+import Progress from "./Progress/Progress";
+import "fontsource-roboto";
 
 function App() {
   return (

@@ -1,72 +1,64 @@
-.plan{
-    list-style-type: none;
-    margin: 2em;
+.plan {
+  list-style-type: none;
+  margin: 2em;
 }
 
 .plan > li {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .trainer-plan-title-container {
-    grid-area: title;
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 6em;
-    text-align: center;
+  grid-area: title;
+  background-color: lightblue;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  height: 6em;
+  text-align: center;
 }
 
-
-
-.trainer-plan-container{
-    grid-area: plan;
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 15em;
-    text-align: center;
+.trainer-plan-container {
+  grid-area: plan;
+  height: 15em;
+  text-align: center;
 }
 
 .trainer-no-container {
-    grid-area: no;
-    width: 10em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 4em;
-    text-align: center;
-    margin-top: 1em;
+  grid-area: no;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4em;
+  text-align: center;
+  margin-top: 150em;
 }
 
 .trainer-yes-container {
-    grid-area: yes;
-    width: 10em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 4em;
-    text-align: center;
-    margin-top: 1em;
+  grid-area: yes;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4em;
+  text-align: center;
+  margin-top: 1em;
 }
 
-.Trainer{
-    display: grid;
-    grid-template-areas:
-      'title title'
-      'plan  plan'
-      'no    yes';
-    grid-gap: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
+.Trainer {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "plan  plan"
+    "no    yes";
+  grid-gap: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  background-color: lightblue;
+  height: 600px;
 }
 
-.trainer-text{
-    font-family: Garamond, serif;
-    font-size: 1.5em;
+.trainer-text {
+  font-size: 1.5em;
 }
 
-.trainer-title{
-    font-family: Garamond, serif;
-    font-size: 3em;
+.trainer-title {
+  font-size: 3em;
 }

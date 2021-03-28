@@ -1,42 +1,56 @@
-.homepage{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    padding: 1em;
-    grid-column-gap:1em;
-    grid-row-gap: 1.5em;
-    grid-auto-rows: minmax(300px, auto);
-    grid-auto-columns: minmax(300px, auto);
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+h2 {
+  padding: 0px;
+  margin: 0px;
+  display: inline;
 }
 
-.homepage > div{
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 10px;
+.homepage {
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 1em;
+  grid-column-gap: 1em;
+  grid-row-gap: 1.5em;
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 600px;
 }
 
-.leaderboard-box{
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+.homepage > div {
+  padding: 0px 20px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
 }
 
-.leaderboard-box:hover{
-    background-color: lightgreen;
+.leaderboard-box {
+  /* background-color: lightblue; */
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
-.link{
-    text-decoration: none;
+.leaderboard-box:hover {
+  /* background-color: lightgreen; */
+}
+
+.link {
+  text-decoration: none;
 }
 
 .progress {
-    background-color: lightblue;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 285px;
+  /* background-color: lightblue; */
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  height: 198px;
+  width: 500px;
 }
 
-.progress:hover{
-    background-color: lightgreen;
+.progress:hover {
+  background-color: lightgreen;
+}
+
+.myProgress {
+  width: 100%;
+  height: 25px;
 }
