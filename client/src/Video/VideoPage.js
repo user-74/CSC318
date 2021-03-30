@@ -50,7 +50,7 @@ class VideoPage extends React.Component {
             to={{
               pathname: "./homepage",
               state: {
-                progress: this.state.progress + 1,
+                progress: this.state.progress,
               },
             }}
           >
